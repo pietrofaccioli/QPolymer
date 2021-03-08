@@ -1,12 +1,12 @@
 # hybrid solver test with 10 edges, 4 vertices
-import dimod
+import dimod, neal
 from dwave.system import LeapHybridSampler
 import numpy as np
 
 h = np.loadtxt('h.txt')
 J = np.loadtxt('J.txt')
-
-sampler = LeapHybridSampler()
+sampler = neal.SimulatedAnnealingSampler()
+#sampler = LeapHybridSampler()
 results = sampler.sample_ising(h,J, num_reads = 100)
 
 out = open('Outputs.txt', 'w')
