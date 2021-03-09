@@ -5,9 +5,9 @@ import numpy as np
 
 h = np.loadtxt('h.txt')
 J = np.loadtxt('J.txt')
-sampler = neal.SimulatedAnnealingSampler()
-#sampler = LeapHybridSampler()
-results = sampler.sample_ising(h,J, num_reads = 100)
+
+sampler = LeapHybridSampler()
+results = sampler.sample_ising(h,J)
 
 out = open('Outputs.txt', 'w')
 for campione in results.record:
