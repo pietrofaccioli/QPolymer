@@ -8,7 +8,7 @@ h0 = 0
 
 # open .dat file containing parameters and count
 
-params = open('fields_and_couplings_L3_nb6_ns7_cross0_Tjunct0_4loop0.dat')
+params = open('ising_parameters.dat')
 
 for row in params:
 	if '#' not in row:
