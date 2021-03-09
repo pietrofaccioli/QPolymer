@@ -34,7 +34,6 @@ for row in params:
 			h[int(row[0])] = row[1]
 		if len(row) == 3:
 			J[int(row[0]),int(row[1])] = row[2]
-			J[int(row[1]),int(row[0])] = row[2]
 
 # saving parameters as txt so to be in the proper form for dwave
 
