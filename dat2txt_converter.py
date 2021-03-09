@@ -24,7 +24,7 @@ for row in params:
 h = np.zeros(dim_h)
 J = np.zeros((dim_h,dim_h))
 
-params = open('fields_and_couplings_L3_nb6_ns7_cross0_Tjunct0_4loop0.dat')
+params = open('ising_parameters.dat')
 for row in params:
 	if '#' not in row:
 		row = np.array(str(row).split(' '))
